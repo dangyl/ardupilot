@@ -8,6 +8,8 @@
 
 extern const AP_HAL::HAL& hal;
 
+AC_PosControl *AC_PosControl::_singleton;
+
 #if APM_BUILD_TYPE(APM_BUILD_ArduPlane)
  // default gains for Plane
  # define POSCONTROL_POS_Z_P                    1.0f    // vertical position controller P gain default

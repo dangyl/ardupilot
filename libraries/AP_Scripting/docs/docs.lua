@@ -3220,6 +3220,14 @@ AR_PosControl = {}
 function AR_PosControl:get_srate() end
 
 -- desc
+---@class AC_PosControl
+AC_PosControl = {}
+
+---@return number 
+function AC_PosControl:get_yaw_cd() end
+
+
+-- desc
 ---@class follow
 follow = {}
 

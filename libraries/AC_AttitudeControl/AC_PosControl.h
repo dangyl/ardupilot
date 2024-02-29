@@ -52,7 +52,9 @@ public:
     /// get_shaping_jerk_xy_cmsss - gets the jerk limit of the xy kinematic path generation in cm/s/s/s
     float get_shaping_jerk_xy_cmsss() const { return _shaping_jerk_xy*100.0; }
 
-
+    static AC_PosControl *get_singleton(void) {
+        return _singleton;
+    }
     ///
     /// 3D position shaper
     ///
@@ -484,4 +486,6 @@ protected:
 
     // return true if on a real vehicle or SITL with lock-step scheduling
     bool has_good_timing(void) const;
+
+    static AC_PosControl *_singleton;
 };
